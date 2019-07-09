@@ -20,3 +20,5 @@ request.setValue(form.contentType, forHTTPHeaderField: "Content-Type")
 let task = session.uploadTask(with: request, from: form.bodyData)
 task.resume()
 ```
+
+To upload a file in the background, you can write out `form.bodyData` to a file and create an upload task from that.
