@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'MultipartForm'
-  s.version          = '0.0.1'
+  s.version          = '0.1.0'
   s.summary          = 'The missing multipart form support for URLSession.'
 
   s.homepage         = 'https://github.com/davbeck/MultipartForm'
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.osx.deployment_target  = '10.10'
 
-  s.swift_version = '4.2'
+  s.swift_version = '5.1'
   s.source_files = 'Sources/MultipartForm/*.swift'
   
   s.test_spec 'MultipartFormTests' do |test_spec|
