@@ -33,18 +33,18 @@ public struct MultipartForm: Hashable, Equatable {
             self.init(name: name, data: data, filename: nil, contentType: nil)
         }
     }
-
-	public enum MultipartType: String {
-		case formData = "form-data"
-		case mixed = "mixed"
-	}
+    
+    public enum MultipartType: String {
+        case formData = "form-data"
+        case mixed = "mixed"
+    }
     
     public var boundary: String
     public var parts: [Part]
-	public var multipartType: MultipartType
-
+    public var multipartType: MultipartType
+    
     public var contentType: String {
-		return "multipart/\(multipartType.rawValue); boundary=\(self.boundary)"
+        return "multipart/\(multipartType.rawValue); boundary=\(self.boundary)"
     }
     
     public var bodyData: Data {
@@ -68,10 +68,10 @@ public struct MultipartForm: Hashable, Equatable {
         return body
     }
     
-	public init(parts: [Part] = [], boundary: String = UUID().uuidString, multipartType: MultipartType = .formData) {
+    public init(parts: [Part] = [], boundary: String = UUID().uuidString, multipartType: MultipartType = .formData) {
         self.parts = parts
         self.boundary = boundary
-		self.multipartType = multipartType
+        self.multipartType = multipartType
     }
     
     public subscript(name: String) -> Part? {

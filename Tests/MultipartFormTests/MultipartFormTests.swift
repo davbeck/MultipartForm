@@ -24,17 +24,17 @@ final class MultipartFormTests: XCTestCase {
         XCTAssertEqual(form.contentType, "multipart/form-data; boundary=9BFDAA7B-7244-4DA8-916B-2311D3CD1FEE")
     }
 
-	func testMultipartMixedType() {
-		let form = MultipartForm(boundary: "9BFDAA7B-7244-4DA8-916B-2311D3CD1FEE", multipartType: .mixed)
+    func testMultipartMixedType() {
+        let form = MultipartForm(boundary: "9BFDAA7B-7244-4DA8-916B-2311D3CD1FEE", multipartType: .mixed)
 
-		XCTAssertEqual(form.contentType, "multipart/mixed; boundary=9BFDAA7B-7244-4DA8-916B-2311D3CD1FEE")
-	}
+        XCTAssertEqual(form.contentType, "multipart/mixed; boundary=9BFDAA7B-7244-4DA8-916B-2311D3CD1FEE")
+    }
 
-	func testMultipartFormDataType() {
-		let form = MultipartForm(boundary: "9BFDAA7B-7244-4DA8-916B-2311D3CD1FEE", multipartType: .formData)
+    func testMultipartFormDataType() {
+        let form = MultipartForm(boundary: "9BFDAA7B-7244-4DA8-916B-2311D3CD1FEE", multipartType: .formData)
 
-		XCTAssertEqual(form.contentType, "multipart/form-data; boundary=9BFDAA7B-7244-4DA8-916B-2311D3CD1FEE")
-	}
+        XCTAssertEqual(form.contentType, "multipart/form-data; boundary=9BFDAA7B-7244-4DA8-916B-2311D3CD1FEE")
+    }
     
     func testSubscriptGet() {
         let form = MultipartForm(parts: [
